@@ -16,6 +16,11 @@ The plugin exports a vtable from the "old" build of a binary, then in the "new" 
 - **Automatically detects the slot count** of a vtable by scanning for pointers into executable code.
 - **Transfers user-defined names** of functions from the old database to confidently matched slots in the new one.
 - **Generates an interactive HTML report** (search, status filters, sorting, per-function details, match highlighting, CSV export). Useful for documenting and sharing results without opening IDA.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a81efdff-e4d4-41ba-b5c4-2f7a97233a8a" width="49%">
+  <img src="https://github.com/user-attachments/assets/f0ce0cc0-410b-4a89-9193-bb2729f901ee" width="49%">
+</p>
+
 - **Useful during analysis**: when a vtable layout changes between versions of a game or application (a virtual method was added or removed), the plugin quickly shows which old signatures, hooks, and offsets need to be fixed for the new version.
 
 ---

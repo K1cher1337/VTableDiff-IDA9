@@ -798,6 +798,7 @@ def do_export():
         json.dump(data, f)
     remember_dir("json", path)
     print("[vtdiff] exported %d slots (vtable 0x%X) -> %s" % (data["count"], c["vt"], path))
+    print("[vtdiff] GitHub: https://github.com/K1cher1337/VTableDiff-IDA_9.1_Plugin")
 
 
 def do_compare():
@@ -856,6 +857,7 @@ def do_compare():
     nranges = len(shift_ranges(rows))
     print("[vtdiff] %d -> %d slots: %d matched (%d weak), %d removed, %d new, %d shift ranges" %
           (len(old), len(new), matched, weak, removed, added, nranges))
+    print("[vtdiff] GitHub: https://github.com/K1cher1337/VTableDiff-IDA_9.1_Plugin")
 
     choose_output()
 
@@ -1427,6 +1429,7 @@ def do_console():
     L.append("[vtdiff] shift ranges:")
     for a, b, sh in shift_ranges(st["rows"]):
         L.append("   old %d..%d  ->  %+d slots (%+d bytes)" % (a, b, sh, sh * ps))
+    L.append("[vtdiff] GitHub: https://github.com/K1cher1337/VTableDiff-IDA_9.1_Plugin")
     print("\n".join(L))
 
 
